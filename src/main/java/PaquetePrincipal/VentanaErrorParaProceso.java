@@ -44,7 +44,7 @@ public class VentanaErrorParaProceso extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("VENTANA DE ERROR");
 
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/error128.png"))); // NOI18N
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/error128.png"))); // NOI18N
 
         etiquetaError.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         etiquetaError.setText("AVISO DE ERROR");

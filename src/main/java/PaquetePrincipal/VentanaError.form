@@ -35,7 +35,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="etiquetaError" min="-2" pref="148" max="-2" attributes="0"/>
-                      <EmptySpace min="34" pref="218" max="32767" attributes="0"/>
+                      <EmptySpace min="34" pref="90" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -65,7 +65,7 @@
     <Component class="javax.swing.JLabel" name="Imagen">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/error128.png"/>
+          <Image iconType="3" name="/PaquetePrincipal/error128.png"/>
         </Property>
       </Properties>
     </Component>

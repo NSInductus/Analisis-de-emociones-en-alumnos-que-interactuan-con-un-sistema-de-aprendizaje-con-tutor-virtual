@@ -61,7 +61,7 @@ public class VentanaOpciones extends javax.swing.JFrame {
         etiquetaOpciones.setText("OPCIONES DE ANÁLISIS");
 
         botonAtras.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atras32.png"))); // NOI18N
+        botonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/atras32.png"))); // NOI18N
         botonAtras.setText("ATRAS");
         botonAtras.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonAtras.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -72,7 +72,7 @@ public class VentanaOpciones extends javax.swing.JFrame {
         });
 
         botonAceptar.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/play32.png"))); // NOI18N
+        botonAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/play32.png"))); // NOI18N
         botonAceptar.setText("ACEPTAR");
         botonAceptar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonAceptar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);

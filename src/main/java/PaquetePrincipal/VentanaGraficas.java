@@ -132,7 +132,7 @@ public class VentanaGraficas extends javax.swing.JFrame {
         });
 
         botonAtras.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atras32.png"))); // NOI18N
+        botonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/atras32.png"))); // NOI18N
         botonAtras.setText("ATRAS");
         botonAtras.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonAtras.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);

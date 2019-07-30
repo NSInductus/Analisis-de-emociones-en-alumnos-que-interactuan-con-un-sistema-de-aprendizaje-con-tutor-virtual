@@ -43,7 +43,7 @@ public class VentanaError extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("VENTANA DE ERROR");
 
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/error128.png"))); // NOI18N
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/error128.png"))); // NOI18N
 
         etiquetaError.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         etiquetaError.setText("AVISO DE ERROR");
@@ -65,7 +65,7 @@ public class VentanaError extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(etiquetaError, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 218, Short.MAX_VALUE))))
+                        .addGap(34, 90, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

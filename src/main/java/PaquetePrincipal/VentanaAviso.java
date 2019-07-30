@@ -43,7 +43,7 @@ public class VentanaAviso extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("VENTANA DE AVISO");
 
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/comprobado128.png"))); // NOI18N
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/comprobado128.png"))); // NOI18N
 
         etiquetaError.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         etiquetaError.setText("AVISO");
@@ -65,7 +65,7 @@ public class VentanaAviso extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(etiquetaError, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 218, Short.MAX_VALUE))))
+                        .addGap(34, 90, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

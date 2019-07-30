@@ -60,7 +60,7 @@
           <Font name="Candara" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/play32.png"/>
+          <Image iconType="3" name="/PaquetePrincipal/play32.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;ANALIZAR VIDEO"/>
         <Property name="toolTipText" type="java.lang.String" value="Clica aqu&#xed; para empezar a analizar el video."/>
@@ -78,7 +78,7 @@
           <Font name="Candara" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/usuario32.png"/>
+          <Image iconType="3" name="/PaquetePrincipal/usuario32.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="MENU USUARIO"/>
         <Property name="toolTipText" type="java.lang.String" value="Clic aqu&#xed; para cambiar a un nuevo usuario o en su defecto para crear un nuevo usuario, donde se introduzca una clave de Microsoft API."/>
@@ -96,7 +96,7 @@
           <Font name="Candara" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/instrumentos32.png"/>
+          <Image iconType="3" name="/PaquetePrincipal/instrumentos32.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="OPCIONES"/>
         <Property name="toolTipText" type="java.lang.String" value="Clic aqu&#xed; para cambiar las opciones deseadas que se aplicar&#xe1;n al posterior analisis de emociones en un archivo de video."/>
