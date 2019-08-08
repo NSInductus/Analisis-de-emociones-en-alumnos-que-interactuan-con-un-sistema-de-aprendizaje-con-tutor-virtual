@@ -48,7 +48,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         setTitle("MENU DE USUARIO");
 
         botonCargarUsuario.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonCargarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/cargar-usuario32x32.png"))); // NOI18N
+        botonCargarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/cargar-usuario32x32.png"))); // NOI18N
         botonCargarUsuario.setText("CARGAR USUARIO");
         botonCargarUsuario.setToolTipText("Carga un usuario guardado anteriormente.");
         botonCargarUsuario.setDefaultCapable(false);
@@ -61,7 +61,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         });
 
         botonNuevoUsuario.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonNuevoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/agregar-usuario32x32.png"))); // NOI18N
+        botonNuevoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/agregar-usuario32x32.png"))); // NOI18N
         botonNuevoUsuario.setText("NUEVO USUARIO");
         botonNuevoUsuario.setToolTipText("Crea un nuevo usuario, con una clave de Microsoft válida.");
         botonNuevoUsuario.setDefaultCapable(false);
@@ -74,7 +74,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         });
 
         botonAtras.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/play32.png"))); // NOI18N
+        botonAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/play32.png"))); // NOI18N
         botonAtras.setText("CONTINUAR");
         botonAtras.setToolTipText("Una vez activado el usuario deseado haga clic en este boton para continuar con el proceso.");
         botonAtras.setDefaultCapable(false);
@@ -87,7 +87,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         });
 
         botonActualizarUsuario.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonActualizarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/actualizar-usuario32x32.png"))); // NOI18N
+        botonActualizarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/actualizar-usuario32x32.png"))); // NOI18N
         botonActualizarUsuario.setText("ACTUALIZAR USUARIO");
         botonActualizarUsuario.setToolTipText("Actualiza la información de un usuario creado con anterioridad.");
         botonActualizarUsuario.setDefaultCapable(false);

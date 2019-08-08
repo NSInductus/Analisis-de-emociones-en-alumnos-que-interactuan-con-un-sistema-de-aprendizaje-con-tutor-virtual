@@ -45,7 +45,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setTitle("MENU PRINCIPAL");
 
         BotonAnalizar.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        BotonAnalizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/play32.png"))); // NOI18N
+        BotonAnalizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/play32.png"))); // NOI18N
         BotonAnalizar.setText("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nANALIZAR VIDEO");
         BotonAnalizar.setToolTipText("Clica aquí para empezar a analizar el video.");
         BotonAnalizar.setDefaultCapable(false);
@@ -58,7 +58,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
 
         BotonOpciones.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        BotonOpciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/usuario32.png"))); // NOI18N
+        BotonOpciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/usuario32.png"))); // NOI18N
         BotonOpciones.setText("MENU USUARIO");
         BotonOpciones.setToolTipText("Clic aquí para cambiar a un nuevo usuario o en su defecto para crear un nuevo usuario, donde se introduzca una clave de Microsoft API.");
         BotonOpciones.setDefaultCapable(false);
@@ -71,7 +71,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
 
         BotonUsuarios.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        BotonUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/instrumentos32.png"))); // NOI18N
+        BotonUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/instrumentos32.png"))); // NOI18N
         BotonUsuarios.setText("OPCIONES");
         BotonUsuarios.setToolTipText("Clic aquí para cambiar las opciones deseadas que se aplicarán al posterior analisis de emociones en un archivo de video.");
         BotonUsuarios.setDefaultCapable(false);

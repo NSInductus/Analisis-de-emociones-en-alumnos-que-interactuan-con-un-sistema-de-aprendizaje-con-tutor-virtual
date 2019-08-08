@@ -39,14 +39,16 @@ public class VentanaSeguimiento extends javax.swing.JFrame {
         
         if(Principal.estaEnPausa == false){
             
-            valorEstado.setIcon(new ImageIcon("/play64.png"));
+            //valorEstado.setIcon(new ImageIcon("play64.png"));
+            valorEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/play64.png")));
             
             etiquetaEstado.setText("Estado: Analizando");
             
         }else{
             
-            valorEstado.setIcon(new ImageIcon("/espera64.png"));
+            //valorEstado.setIcon(new ImageIcon("espera64.png"));
             
+            valorEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/espera64.png")));
             etiquetaEstado.setText("Estado: En espera");
             
         }
@@ -123,7 +125,7 @@ public class VentanaSeguimiento extends javax.swing.JFrame {
         etiquetaTitulo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         etiquetaTitulo.setText("RESULTADOS PROVISIONALES");
 
-        valorEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/play64.png"))); // NOI18N
+        valorEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/play64.png"))); // NOI18N
 
         etiquetaEstado.setText("Estado:");
 

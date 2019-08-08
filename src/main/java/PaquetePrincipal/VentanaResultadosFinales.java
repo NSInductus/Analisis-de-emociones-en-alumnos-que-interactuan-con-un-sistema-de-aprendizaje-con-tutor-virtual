@@ -228,7 +228,7 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         etiquetaTitulo.setText("RESULTADOS FINALES");
 
         botonXLSX.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonXLSX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/disquete32.png"))); // NOI18N
+        botonXLSX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/disquete32.png"))); // NOI18N
         botonXLSX.setText("A XLSX");
         botonXLSX.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonXLSX.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -239,7 +239,7 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         });
 
         resultadosTXT.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        resultadosTXT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/disquete32.png"))); // NOI18N
+        resultadosTXT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/disquete32.png"))); // NOI18N
         resultadosTXT.setText("A TXT");
         resultadosTXT.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         resultadosTXT.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -250,7 +250,7 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         });
 
         resultadosAtras.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        resultadosAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/atras32.png"))); // NOI18N
+        resultadosAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/atras32.png"))); // NOI18N
         resultadosAtras.setText("ATRÁS");
         resultadosAtras.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         resultadosAtras.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -261,7 +261,7 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         });
 
         botonPorcentajes.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonPorcentajes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/formato32.png"))); // NOI18N
+        botonPorcentajes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/formato32.png"))); // NOI18N
         botonPorcentajes.setText("%");
         botonPorcentajes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonPorcentajes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -272,7 +272,7 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         });
 
         botonTotales.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonTotales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/formato32.png"))); // NOI18N
+        botonTotales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/formato32.png"))); // NOI18N
         botonTotales.setText("totales");
         botonTotales.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonTotales.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);

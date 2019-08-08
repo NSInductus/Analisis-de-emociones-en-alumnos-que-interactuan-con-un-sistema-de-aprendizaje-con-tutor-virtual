@@ -118,7 +118,7 @@
           <Font name="Candara" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/PaquetePrincipal/atras32.png"/>
+          <Image iconType="3" name="/PaqueteImagenes/atras32.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="ATRAS"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -134,7 +134,7 @@
           <Font name="Candara" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/PaquetePrincipal/play32.png"/>
+          <Image iconType="3" name="/PaqueteImagenes/play32.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="ACEPTAR"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>

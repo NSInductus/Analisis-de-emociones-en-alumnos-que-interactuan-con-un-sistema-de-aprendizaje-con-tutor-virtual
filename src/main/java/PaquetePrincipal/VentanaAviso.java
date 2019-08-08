@@ -43,7 +43,7 @@ public class VentanaAviso extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("VENTANA DE AVISO");
 
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/comprobado128.png"))); // NOI18N
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/comprobado128.png"))); // NOI18N
 
         etiquetaError.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         etiquetaError.setText("AVISO");

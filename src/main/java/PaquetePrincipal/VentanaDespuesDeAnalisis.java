@@ -35,7 +35,7 @@ public class VentanaDespuesDeAnalisis extends javax.swing.JFrame {
         setTitle("VENTANA DESPUES DE ANALIZAR");
 
         botonResultadosFinales.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonResultadosFinales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/resultados32.png"))); // NOI18N
+        botonResultadosFinales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/resultados32.png"))); // NOI18N
         botonResultadosFinales.setText("RESULTADOS");
         botonResultadosFinales.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonResultadosFinales.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -46,7 +46,7 @@ public class VentanaDespuesDeAnalisis extends javax.swing.JFrame {
         });
 
         botonGraficas.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonGraficas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/graficas32.png"))); // NOI18N
+        botonGraficas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/graficas32.png"))); // NOI18N
         botonGraficas.setText("GRAFICAS");
         botonGraficas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonGraficas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -57,7 +57,7 @@ public class VentanaDespuesDeAnalisis extends javax.swing.JFrame {
         });
 
         botonVolverMenuPrincipal.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        botonVolverMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaquetePrincipal/atras32.png"))); // NOI18N
+        botonVolverMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/atras32.png"))); // NOI18N
         botonVolverMenuPrincipal.setText("AL INICIO");
         botonVolverMenuPrincipal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonVolverMenuPrincipal.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
