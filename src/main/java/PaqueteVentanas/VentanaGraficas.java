@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PaquetePrincipal;
+package PaqueteVentanas;
+
+import PaquetePostAnalisis.FuncionesGraficas;
+import PaquetePreAnalisis.Principal;
 
 /**
  *
@@ -217,65 +220,65 @@ public class VentanaGraficas extends javax.swing.JFrame {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
              // new FuncionesGraficas().hacerGraficaAngerTotal();
-               new FuncionesGraficas().hacerGraficaTotalGenerica2(0);
+               new FuncionesGraficas().hacerGraficaEmocionTiempoGenerica(0);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
               // new FuncionesGraficas().hacerGraficaContemptTotal();
-               new FuncionesGraficas().hacerGraficaTotalGenerica2(1);
+               new FuncionesGraficas().hacerGraficaEmocionTiempoGenerica(1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
              //  new FuncionesGraficas().hacerGraficaDisgustTotal();
-               new FuncionesGraficas().hacerGraficaTotalGenerica2(2);
+               new FuncionesGraficas().hacerGraficaEmocionTiempoGenerica(2);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
              //  new FuncionesGraficas().hacerGraficaFearTotal();
-               new FuncionesGraficas().hacerGraficaTotalGenerica2(3);
+               new FuncionesGraficas().hacerGraficaEmocionTiempoGenerica(3);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
              //  new FuncionesGraficas().hacerGraficaHappinessTotal();
-               new FuncionesGraficas().hacerGraficaTotalGenerica2(4);
+               new FuncionesGraficas().hacerGraficaEmocionTiempoGenerica(4);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
               // new FuncionesGraficas().hacerGraficaNeutralTotal();
-               new FuncionesGraficas().hacerGraficaTotalGenerica2(5);
+               new FuncionesGraficas().hacerGraficaEmocionTiempoGenerica(5);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
               // new FuncionesGraficas().hacerGraficaSadnessTotal();
-               new FuncionesGraficas().hacerGraficaTotalGenerica2(6);
+               new FuncionesGraficas().hacerGraficaEmocionTiempoGenerica(6);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void SURPRISEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SURPRISEActionPerformed
         // TODO add your handling code here:
               // new FuncionesGraficas().hacerGraficaSurpriseTotal();
-               new FuncionesGraficas().hacerGraficaTotalGenerica2(7);
+               new FuncionesGraficas().hacerGraficaEmocionTiempoGenerica(7);
     }//GEN-LAST:event_SURPRISEActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
             //  new FuncionesGraficas().hacerGraficaNoAnalizadoTotal();
-               new FuncionesGraficas().hacerGraficaTotalGenerica2(8);
+               new FuncionesGraficas().hacerGraficaEmocionTiempoGenerica(8);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-          new FuncionesGraficas().hacerGrafica2Mayor();
+          new FuncionesGraficas().hacerGraficaFinalPastel();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-          new FuncionesGraficas().hacerGrafica3();
+          new FuncionesGraficas().hacerGraficaFinalBarras();
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed

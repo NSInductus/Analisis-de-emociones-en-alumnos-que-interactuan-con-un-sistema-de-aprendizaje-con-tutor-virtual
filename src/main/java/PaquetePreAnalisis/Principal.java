@@ -1,11 +1,21 @@
 
 //INCLUSION NECESARIA DEL PAQUETE
-package PaquetePrincipal;
+package PaquetePreAnalisis;
 
 //VERSION BETA ES EL PROYECTO PruebaTFGVIDEO2 de netbeans
 
 //IMPORT NECESARIOS
 
+import PaqueteVentanas.VentanaDespuesDeAnalisis;
+import PaqueteVentanas.VentanaUsuario;
+import PaqueteVentanas.VentanaSeguimiento;
+import PaqueteVentanas.VentanaPrincipal;
+import PaqueteVentanas.VentanaGraficas;
+import PaqueteVentanas.VentanaOpciones;
+import PaqueteVentanas.VentanaResultadosFinales;
+import PaqueteVentanas.VentanaUsuarioActualizar;
+import PaqueteVentanas.VentanaUsuarioNuevo;
+import PaqueteAnalisisVideo.HiloProcesoPrincipal;
 import java.util.ArrayList;
 
 /**
@@ -170,7 +180,7 @@ public class Principal {
     public static boolean sesionIniciada = false;
   
     //HILO PARA CREAR EL SUDPROCESO QUE HARA TODO EL ANALISIS DE VIDEO
-    public static Hilo hilo1=new Hilo("Proceso principal de analisis de video");
+    public static HiloProcesoPrincipal hilo1=new HiloProcesoPrincipal("Proceso principal de analisis de video");
    
     //STRING QUE CONTIENE EL VIDEO A ANALIZAR (ESTA AQUI PARA QUE PUEDA SER LLAMADO DESDE VARIOS LUGARES)
     public static String videoFile = null;

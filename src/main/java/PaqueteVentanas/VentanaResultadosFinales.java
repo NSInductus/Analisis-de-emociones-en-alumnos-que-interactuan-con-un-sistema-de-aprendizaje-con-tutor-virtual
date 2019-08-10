@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PaquetePrincipal;
+package PaqueteVentanas;
 
+import PaquetePostAnalisis.FuncionesResultados;
+import PaqueteAnalisisVideo.Funciones;
+import PaquetePreAnalisis.Principal;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;

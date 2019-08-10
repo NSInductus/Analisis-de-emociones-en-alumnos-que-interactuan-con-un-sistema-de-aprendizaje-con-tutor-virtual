@@ -3,15 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PaquetePrincipal;
+package PaqueteAnalisisVideo;
+
+import PaqueteAnalisisVideo.Funciones;
+import PaquetePostAnalisis.FuncionesResultados;
+import PaquetePreAnalisis.Principal;
 
 
 
-public class Hilo extends Thread {
+public class HiloProcesoPrincipal extends Thread {
     
   //public boolean matarHilo; 
             
-  public Hilo(String nombre) {
+  public HiloProcesoPrincipal(String nombre) {
     super(nombre);
     //matarHilo=false;
   }

@@ -1,8 +1,11 @@
 //INCLUSION NECESARIA DEL PAQUETE
-package PaquetePrincipal;
+package PaqueteAnalisisVideo;
 
 //IMPORT NECESARIOS
-import PaquetePrincipal.Principal;
+import PaquetePreAnalisis.Contenedor;
+import PaquetePreAnalisis.Principal;
+import PaquetePreAnalisis.Principal;
+import PaqueteVentanas.VentanaErrorParaProceso;
 import com.xuggle.xuggler.Global;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -887,7 +890,7 @@ public class Funciones {
         
     }
     
-    String claseEnteroACadena(int clase){
+    public String claseEnteroACadena(int clase){
         
         String claseCadena = null;
         

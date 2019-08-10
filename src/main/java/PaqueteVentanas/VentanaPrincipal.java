@@ -1,7 +1,10 @@
 //INCLUSION NECESARIA DEL PAQUETE
-package PaquetePrincipal;
+package PaqueteVentanas;
 
 //IMPORT NECESARIOS
+import PaqueteAnalisisVideo.HiloProcesoPrincipal;
+import PaqueteAnalisisVideo.Funciones;
+import PaquetePreAnalisis.Principal;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -176,7 +179,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Principal.ventana_seguimiento.setResizable(false);
         
     //HILO PARA CREAR EL SUDPROCESO QUE HARA TODO EL ANALISIS DE VIDEO
-    Hilo hilo12=new Hilo("Proceso principal de analisis de video");
+    HiloProcesoPrincipal hilo12=new HiloProcesoPrincipal("Proceso principal de analisis de video");
 
         //Principal.hilo1.start();
         hilo12.start();

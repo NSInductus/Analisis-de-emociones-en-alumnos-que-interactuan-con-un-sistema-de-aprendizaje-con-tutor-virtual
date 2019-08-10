@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PaquetePrincipal;
+package PaquetePostAnalisis;
 
+import PaqueteAnalisisVideo.Funciones;
+import PaquetePreAnalisis.Principal;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -37,7 +39,7 @@ public class FuncionesResultados {
     Funciones aux = new Funciones();
     
     
-    void crearResultadosPorcentajes(){
+    public void crearResultadosPorcentajes(){
 
 
     //total util
@@ -181,7 +183,7 @@ public class FuncionesResultados {
    
     
     
-    void resultadosTXT(int formato) throws IOException{
+    public void resultadosTXT(int formato) throws IOException{
             
             System.out.println(Principal.nombreFichero);
             
@@ -306,7 +308,7 @@ public class FuncionesResultados {
         }
         
        //nuevo 
-    void crearDataset(int formato){
+    public void crearDataset(int formato){
         
         String nombreFichero = null;
         
@@ -455,7 +457,7 @@ public class FuncionesResultados {
     }
     
     
-    void crearDatasetPorFotograma(){
+    public void crearDatasetPorFotograma(){
     
         String nombreFichero = Principal.rutaGuardar + "\\DatosPorFotograma-" + Principal.nombreFichero + ".xlsx" ;
                    

@@ -1,11 +1,12 @@
-package PaquetePrincipal;
+package PaqueteAnalisisVideo;
 
 //FUNCIONES PARA  LA DESCOMPOSICION DE LOS  VIDEOS
 
 //Import necesarios
 
-import PaquetePrincipal.Funciones;
-import PaquetePrincipal.Principal;
+import PaqueteAnalisisVideo.Funciones;
+import PaquetePreAnalisis.Principal;
+import PaquetePreAnalisis.Principal;
 import javax.imageio.ImageIO;
 
 import java.io.File;

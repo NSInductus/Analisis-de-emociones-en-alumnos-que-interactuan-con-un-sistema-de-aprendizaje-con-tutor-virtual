@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PaquetePrincipal;
+package PaqueteVentanas;
+
+import PaquetePreAnalisis.Principal;
 
 /**
  *
  * @author angel
  */
-public class VentanaErrorParaProceso extends javax.swing.JFrame {
+public class VentanaAviso extends javax.swing.JFrame {
 
     /**
      * Creates new form VentanaError
      */
-    public VentanaErrorParaProceso() {
+    public VentanaAviso() {
         initComponents();
         
         
@@ -39,25 +41,17 @@ public class VentanaErrorParaProceso extends javax.swing.JFrame {
         etiquetaError = new javax.swing.JLabel();
         panelDeslizador = new javax.swing.JScrollPane();
         etiquetaDescripcionError = new javax.swing.JTextPane();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("VENTANA DE ERROR");
+        setTitle("VENTANA DE AVISO");
 
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/error128.png"))); // NOI18N
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/comprobado128.png"))); // NOI18N
 
         etiquetaError.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        etiquetaError.setText("AVISO DE ERROR");
+        etiquetaError.setText("AVISO");
 
         etiquetaDescripcionError.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         panelDeslizador.setViewportView(etiquetaDescripcionError);
-
-        jButton1.setText("TERMINAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,46 +61,31 @@ public class VentanaErrorParaProceso extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addComponent(Imagen)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(etiquetaError, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelDeslizador, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(panelDeslizador)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(etiquetaError, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 90, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Imagen, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(etiquetaError, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelDeslizador, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Imagen, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(panelDeslizador)))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-        Principal.matarHilo=true;
-        
-        Principal.ventana_seguimiento.setVisible(false);
-        
-        Principal.ventana_principal.setVisible(true);
-        
-        Principal.ventana_principal.setResizable(false);
-        
-          System.out.printf("Proceso terminado.");
-          
-        new Funciones().imprimir("Porcentajes","Porcentajes");
-          
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,13 +104,13 @@ public class VentanaErrorParaProceso extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaErrorParaProceso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaAviso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaErrorParaProceso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaAviso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaErrorParaProceso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaAviso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaErrorParaProceso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaAviso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -139,7 +118,7 @@ public class VentanaErrorParaProceso extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaErrorParaProceso().setVisible(true);
+                new VentanaAviso().setVisible(true);
             }
         });
     }
@@ -148,7 +127,6 @@ public class VentanaErrorParaProceso extends javax.swing.JFrame {
     private javax.swing.JLabel Imagen;
     private javax.swing.JTextPane etiquetaDescripcionError;
     private javax.swing.JLabel etiquetaError;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane panelDeslizador;
     // End of variables declaration//GEN-END:variables
 }

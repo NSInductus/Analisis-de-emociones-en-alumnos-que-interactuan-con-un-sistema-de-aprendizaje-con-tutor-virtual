@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PaquetePrincipal;
+package PaqueteVentanas;
 
+import PaquetePreAnalisis.Principal;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -44,7 +45,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         botonAtras = new javax.swing.JButton();
         botonActualizarUsuario = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MENU DE USUARIO");
 
         botonCargarUsuario.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N

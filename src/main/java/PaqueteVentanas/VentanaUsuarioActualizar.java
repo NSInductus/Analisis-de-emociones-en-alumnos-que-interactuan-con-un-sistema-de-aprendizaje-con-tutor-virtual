@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 
-package PaquetePrincipal;
+package PaqueteVentanas;
 
+import PaquetePreAnalisis.Principal;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.nio.file.Files;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,14 +23,16 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author angel
  */
-public class VentanaUsuarioNuevo extends javax.swing.JFrame {
+public class VentanaUsuarioActualizar extends javax.swing.JFrame {
 
     /**
      * Creates new form VentanaUsuarioNuevo
      */
-    public VentanaUsuarioNuevo() {
+    public VentanaUsuarioActualizar() {
         initComponents();
     }
+    
+    public static String userFile = null;
     
       public static String rutaFileGuardar = null;
       public static boolean hayRutaGuardar = false;
@@ -51,9 +55,7 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
         etiqueta = new javax.swing.JLabel();
         etiquetaPass = new javax.swing.JLabel();
         etiquetaPConex = new javax.swing.JLabel();
-        etiquetaNick = new javax.swing.JLabel();
         valorPass = new javax.swing.JPasswordField();
-        valorNick = new javax.swing.JTextField();
         valorPConex = new javax.swing.JTextField();
         etiquetaRuta = new javax.swing.JLabel();
         butonSeleccionarRuta = new javax.swing.JButton();
@@ -61,6 +63,7 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
         valorVersionPrueba = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("ACTUALIZAR USUARIO");
 
         botonAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/play32.png"))); // NOI18N
         botonAceptar.setText("ACEPTAR");
@@ -83,19 +86,15 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
         });
 
         etiqueta.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        etiqueta.setText("NUEVO USUARIO:");
+        etiqueta.setText("ACTUALIZAR USUARIO:");
 
         etiquetaPass.setText("Contraseña de ApiFace:");
 
         etiquetaPConex.setText("Punto de conexion:");
 
-        etiquetaNick.setText("Nombre o nick:");
-
-        valorPass.setText("ae0b18f78ec44aedbf41fe475acf1949");
-
         valorPConex.setText("https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect");
 
-        etiquetaRuta.setText("Ruta para guardarlo:");
+        etiquetaRuta.setText("Usuario a actualizar:");
 
         butonSeleccionarRuta.setText("Seleccionar");
         butonSeleccionarRuta.addActionListener(new java.awt.event.ActionListener() {
@@ -126,14 +125,10 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(204, 204, 204)
-                                .addComponent(valorNick))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(etiquetaPass, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(etiquetaRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(etiquetaVersionPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(36, 36, 36)
+                                .addGap(45, 45, 45)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(valorPConex, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                                     .addComponent(valorPass)
@@ -142,7 +137,7 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
                         .addGap(26, 26, 26))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(etiquetaNick, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(etiquetaRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(etiqueta, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
@@ -151,10 +146,10 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(etiqueta, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(etiquetaNick, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                    .addComponent(valorNick))
+                .addGap(5, 5, 5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiquetaRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(butonSeleccionarRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(etiquetaPass, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -166,15 +161,13 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(etiquetaVersionPrueba, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(valorVersionPrueba, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiquetaRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(butonSeleccionarRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(valorVersionPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -186,12 +179,18 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
         
         if(hayRutaGuardar == true){
       
-            String nickUsuario = valorNick.getText();
+            String nickUsuario = nick;
             String passUsuario = new String(valorPass.getPassword());
             
             String pConexUsuario = valorPConex.getText();
             
             
+            System.out.println("WWWWWWWWWWWWWWWWWWW");
+                
+            System.out.println("|"+ passUsuario + "|");
+            System.out.println("|"+ pConexUsuario + "|");
+            
+             System.out.println("WWWWWWWWWWWWWWWWWWWWWWW");
             boolean esPruebaUsuario = false;
             
             if( valorVersionPrueba.getSelectedIndex() == 0){
@@ -203,7 +202,7 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
                 esPruebaUsuario = false;
             }
             
-            if(!"".equals(nickUsuario) && !"".equals(passUsuario) && !"".equals(pConexUsuario)){
+            if(!"".equals(passUsuario) && !"".equals(pConexUsuario)){
             
                 Principal.user.setNick(nickUsuario);
                 
@@ -231,7 +230,7 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
                 
                 PrintWriter pw = null;
                 
-                String nombreFichero = rutaFileGuardar + "\\" + Principal.user.getNick() + ".txt" ;
+                String nombreFichero = userFile ;
                 
                 System.out.println(nombreFichero);
                 
@@ -282,7 +281,7 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
                 //DESPUES SI O SI
                 
                 //ocultar la ventana
-                Principal.ventana_usuario_nuevo.setVisible(false);
+                Principal.ventana_usuario_actualizar.setVisible(false);
                 
                 //variabble para que funcipone el analizar
                 Principal.sesionIniciada = true;
@@ -291,7 +290,7 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
             
                 //ERROR NO PUEDEN QUEDARSE NINGUNO DE LOS 3 PRIMEROS CAMPOS VACIOS
                 //ERROR DESEADO
-                Principal.error = "NO PUEDEN QUEDARSE NINGUNO DE LOS 3 PRIMEROS CAMPOS VACIOS";
+                Principal.error = "NO PUEDEN QUEDARSE NINGUNO DE LOS CAMPOS VACIOS Y SE HA DE SELECIONAR UN USUARIO EN EL FORMATO.TXT";
 
                 //CREACIÓN VENTANA DE ERROR
                 VentanaError ventana_error = new VentanaError();
@@ -308,7 +307,7 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
             
             //ERROR NO HAY RUTA PARA ALMACENAR EL USUARIO EN FORMATO TXT
             //ERROR DESEADO
-            Principal.error = "NO HAY RUTA PARA ALMACENAR EL USUARIO EN FORMATO TXT";
+            Principal.error = "NO SE HA SELECCIONADO NINGUN USUARIO EN FORMATO TXT";
 
             //CREACIÓN VENTANA DE ERROR
             VentanaError ventana_error = new VentanaError();
@@ -332,34 +331,110 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
 
-        Principal.ventana_usuario_nuevo.setVisible(false);
+        Principal.ventana_usuario_actualizar.setVisible(false);
 
         Principal.ventana_usuarios.setVisible(true);
     }//GEN-LAST:event_botonAtrasActionPerformed
 
     private void butonSeleccionarRutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butonSeleccionarRutaActionPerformed
         // TODO add your handling code here:
-                //resetear valores iniciales de los contadores 
-        rutaFileGuardar = cargarRuta();
+         //LLAMA A LA FUNCION CARGAR, para la seleccion manual del archivo de video
+        userFile = cargar();
+     
+        //COMPROBACION, de la ruta de video elegido
+        System.out.println("La ruta del archivo .TXT contenedor del usuario deseado es: "); 
+        System.out.println(userFile); 
         
-        //Principal.valorUsuarioRuta = rutaFileGuardar;
+        //PARA PROBAR CONTENIDO
         
-         System.out.println("|"+rutaFileGuardar+"|");
-         
-         
         //declaracion del File para la comprobación
-        File archivo = new File(rutaFileGuardar);
+        File archivo = new File(userFile);
         
+        //String para la comprobacion
+        String tipodeArchivo = null;
+        //probar el archivo
+        try {
+            tipodeArchivo = Files.probeContentType(archivo.toPath());
+        } catch (IOException ex) {
+            Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        //System.out.println(tipodeArchivo);
+        
+        //manipulacion de la cadena para comprobar facilmente si es de tipo video o no
+        String tipodeArchivoComparar = tipodeArchivo.substring(0, 5 );
+        
+        System.out.println("|"+tipodeArchivoComparar+"|");
+    
+        //comprobacion de si es o no un archivo de video
+        if("text/".equals(tipodeArchivoComparar)){
+       
+        System.out.println("texto");
+        System.out.println(userFile);
+        
+        File archivoLeer = null;
+        
+        FileReader fr = null;
+        
+        BufferedReader br = null;
+        
+        try{
+            
+            archivoLeer = new File (userFile);
+            
+            if(archivoLeer.exists()==false){
+                
+                return;
+            }
+            
+            fr = new FileReader (archivoLeer);
+            
+            br =  new BufferedReader (fr);
+            
+            String linea;
+            
+            linea = br.readLine();
+            
+            nick = linea;
+           
+            
+            hayRutaGuardar = true;
+            
       
-         if (archivo.exists() && archivo.isDirectory()) {
- 
-            hayRutaGuardar=true;
+            
+            
+        }catch (Exception e) { 
                     
-               
+                    e.printStackTrace();
+                    
+        } finally{
+
+            try{
+
+                if(null != fr){
+                    fr.close();
+                }
+
+            } catch (Exception e2){
+
+                e2.printStackTrace();
+
+            }
+
+
+        }
+        
+        
+            
+
+
         }else{
-         
+            
+            System.out.println("Seleccione un archivo TXT que contenga los datos de su usuario");
+            
             //ERROR DESEADO
-            Principal.error = "NO SE HA SELECCIONADO UNA RUTA VALIDA";
+            Principal.error = "SELECCIONE UN ARCHIVO .TXT QUE CONTENGA LOS DATOS DE SU USUARIO";
             
             //CREACIÓN VENTANA DE ERROR
             VentanaError ventana_error = new VentanaError();
@@ -369,7 +444,9 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
             
             //PONER LA VENTANA DE TAMAÑO FIJO
             ventana_error.setResizable(false);
-         }
+            
+        }
+        
     }//GEN-LAST:event_butonSeleccionarRutaActionPerformed
 
     /**
@@ -427,6 +504,32 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
         return fichero.getSelectedFile().toString();
     
     }
+   
+   public String cargar(){
+    
+        //fichero seleccionado
+        JFileChooser fichero = new JFileChooser();
+        
+        //atajos
+        //fcPicture.setFileFilter(new FileNameExtensionFilter("Archivo de imagen", "jpg", "JPG", "jpeg", "JPEG", "png", "PNG", "gif", "GIF", "tif", "TIF", "tiff", "TIFF"));
+        fichero.setFileFilter(new FileNameExtensionFilter("Archivos TXT", "txt"));
+        
+       
+        //atajos
+        //fcPicture.setFileFilter(new FileNameExtensionFilter("Archivo de imagen", "jpg", "JPG", "jpeg", "JPEG", "png", "PNG", "gif", "GIF", "tif", "TIF", "tiff", "TIFF"));
+        //fichero.setFileFilter(new FileNameExtensionFilter("Carpeta de archivos", "mkv", "mp4", "wmv"));
+        //fichero.setCurrentDirectory(JFileChooser.FILES_AND_DIRECTORIES);
+        fichero.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+        
+        //ventana madre para mostrar la ventana de abrir
+        int option = fichero.showDialog(this, "Seleccionar"); 
+        
+        
+        
+        //devuelve directamente el fichero especificado
+        return fichero.getSelectedFile().toString();
+    
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -434,12 +537,10 @@ public class VentanaUsuarioNuevo extends javax.swing.JFrame {
     private javax.swing.JButton botonAtras;
     private javax.swing.JButton butonSeleccionarRuta;
     private javax.swing.JLabel etiqueta;
-    private javax.swing.JLabel etiquetaNick;
     private javax.swing.JLabel etiquetaPConex;
     private javax.swing.JLabel etiquetaPass;
     private javax.swing.JLabel etiquetaRuta;
     private javax.swing.JLabel etiquetaVersionPrueba;
-    private javax.swing.JTextField valorNick;
     private javax.swing.JTextField valorPConex;
     private javax.swing.JPasswordField valorPass;
     private javax.swing.JComboBox<String> valorVersionPrueba;

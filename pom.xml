@@ -80,7 +80,7 @@
           </descriptorRefs>
            <archive>
             <manifest>
-              <mainClass>PaquetePrincipal.Principal</mainClass>
+              <mainClass>PaquetePreAnalisis.Principal</mainClass>
             </manifest>
           </archive>
         </configuration>
