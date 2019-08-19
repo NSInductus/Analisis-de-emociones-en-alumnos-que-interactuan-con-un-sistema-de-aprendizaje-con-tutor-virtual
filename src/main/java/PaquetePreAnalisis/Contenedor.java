@@ -1,46 +1,64 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//PAQUETE NECESARIO
 package PaquetePreAnalisis;
 
+//IMPORT NECESARIO
 import java.util.ArrayList;
 
 /**
  *
- * @author angel
+ * @author Angel Murcia Diaz
  */
-//CLASE CONTENEDOR, para ir guardando cada clase y tiempo de cada FRAME
+
+//CLASE CONTENEDOR
 public class Contenedor {
     
+    /////////////
+    //VARIABLES//
+    ////////////
+    
+    //VECTOR PARA ALMACENAR LA CLASE DE CADA FOTOGRAMA
     private ArrayList<Integer> clases_ = new ArrayList<>(); 
     
-    
+    //TIEMPO DEL VIDEO DONDE SE PRODUCE EL FOTOFRAME
     private double tiempo_;
     
-       private int claseMayor_;
+    //CLASE CON MAYOR PORCENTAJE EN EL FOTOFRAME
+    private int claseMayor_;
     
-       
-       private String nombreFile_;
+    //NOMBRE DEL FOTOFRAME
+    private String nombreFile_;
     
-   
-    public ArrayList<Integer> getClases() {return clases_;}
+    /////////////////
+    //MODIFICADORES//
+    ////////////////
     
-   
-
+    //MODIFICADOR DEL VECTOR CLASES
     public void setClases(ArrayList<Integer> clases) {clases_=clases;}
     
+    //MODIFICADOR DE TIEMPO
+    public void setTiempo(double tiempo) {tiempo_=tiempo;}  
+    
+    //MODIFICADOR CLASE MAYOR
+    public void setClaseMayor(int claseMayor) {claseMayor_=claseMayor;}
+      
+    //MODIFICADOR NOMBRE DEL ARCHIVO
+    public void setNombreFile(String nombreFile){nombreFile_=nombreFile;};
+    
+    
+    /////////////////
+    //OBSERVADORES//
+    ////////////////
+    
+    //OBSERVADOR DEL VECTOR CLASES
+    public ArrayList<Integer> getClases() {return clases_;}
+    
+    //OBSERVADOR TIEMPO
     public double getTiempo() {return tiempo_;}
     
-    public void setTiempo(double tiempo) {tiempo_=tiempo;}
-    
+    //OBSERVADOR CLASE MAYOR
     public int getClaseMayor() {return claseMayor_;}
     
-      public void setClaseMayor(int claseMayor) {claseMayor_=claseMayor;}
-      
-      public String getNombreFile(){return nombreFile_;};
-      
-      public void setNombreFile(String nombreFile){nombreFile_=nombreFile;};
+    //OBSERVADOR NOMBRE DEL ARCHIVO
+    public String getNombreFile(){return nombreFile_;};
     
 }

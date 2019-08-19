@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//PAQUETE NECESARIO
 package PaquetePostAnalisis;
 
-
-
+//IMPORT NECESARIOS
 import PaqueteAnalisisVideo.Funciones;
 import PaquetePreAnalisis.Principal;
 import java.awt.BasicStroke;
@@ -33,27 +28,27 @@ import org.jfree.data.xy.XYSeriesCollection;
 
 /**
  *
- * @author angel
+ * @author Angel Murcia Diaz
  */
+
+//CLASE FUNCIONESGRAFICAS
 public class FuncionesGraficas {
-   
-    
+
+    //FUNCION HACER GRAFICA TIPO PASTEL
     public void hacerGraficaFinalPastel(){
         
+        //DECLARACION DEL GRAFICO
         JFreeChart grafico = null;
+        //DECLARACION DEL DEFAULT CATEGORY DATASET
         DefaultCategoryDataset datos = new DefaultCategoryDataset();
         
-      //  int dato;
-        
-        
-      //  datos.addValue(dato,"Grafica 1","Uno");
-
-      
-        
+        //PARA PASAR POR TODO EL CONTENEDOR
         for( int i=0 ; i<Principal.contenedorFrames.size() ; i++ ){
             
+            //CLASE DE CADA UNO DE LOS MIEMBROS DEL CONTENEDOR
             int clase = Principal.contenedorFrames.get(i).getClaseMayor();
             
+            //
             double tiempo = Principal.contenedorFrames.get(i).getTiempo();
             
             String tempo = Double.toString(tiempo);
@@ -109,32 +104,16 @@ public class FuncionesGraficas {
         JFreeChart grafico = null;
         DefaultCategoryDataset datos = new DefaultCategoryDataset();
         
-      //  int dato;
-        
-        
-      //  datos.addValue(dato,"Grafica 1","Uno");
+        datos.addValue( Principal.angerContador, "anger", "Grafica");
+        datos.addValue( Principal.contemptContador, "contempt", "Grafica");
+        datos.addValue( Principal.disgustContador, "disgrust", "Grafica");
+        datos.addValue( Principal.fearContador, "fear", "Grafica");         
+        datos.addValue( Principal.happinessContador, "happiness", "Grafica");
+        datos.addValue( Principal.neutralContador, "neutral", "Grafica"); 
+        datos.addValue( Principal.sadnessContador, "sadness", "Grafica");
+        datos.addValue( Principal.surpriseContador, "surprise", "Grafica");     
+        datos.addValue( Principal.noAnalizadoContador, "NO analizados", "Grafica");
 
-                  //DefaultPieDataset datosPie = new DefaultPieDataset();
-           datos.addValue( Principal.angerContador, "anger", "Grafica");
-           datos.addValue( Principal.contemptContador, "contempt", "Grafica");
-     
-           datos.addValue( Principal.disgustContador, "disgrust", "Grafica");
-
-           datos.addValue( Principal.fearContador, "fear", "Grafica");
-          
-           datos.addValue( Principal.happinessContador, "happiness", "Grafica");
-
-           datos.addValue( Principal.neutralContador, "neutral", "Grafica");
-  
-           datos.addValue( Principal.sadnessContador, "sadness", "Grafica");
-
-           datos.addValue( Principal.surpriseContador, "surprise", "Grafica");
-      
-           datos.addValue( Principal.noAnalizadoContador, "NO analizados", "Grafica");
-     
- 
-      
-        
         String tipoGrafica = "Barras";
         if(tipoGrafica.equals("Barras")){
             grafico = ChartFactory.createBarChart("Grafica del análisis de emociones", "Segundo del fotograma", "Tipo de emocion",datos ,PlotOrientation.VERTICAL, true, true, false);
@@ -142,8 +121,7 @@ public class FuncionesGraficas {
         if(tipoGrafica.equals("Lineal")){
             grafico = ChartFactory.createLineChart("Grafica del análisis de emociones", "Segundo del fotograma", "Tipo de emocion",datos ,PlotOrientation.VERTICAL, true, true, false);
         }
-
-        
+    
         ChartPanel cPanel = new ChartPanel(grafico);
         JFrame informacion = new JFrame("Grafica");
         informacion.getContentPane().add(cPanel);
@@ -151,7 +129,6 @@ public class FuncionesGraficas {
         
         informacion.setVisible(true);
         
- 
         try {
             ChartUtilities.saveChartAsPNG(new File("C:\\Users\\angel\\Desktop\\prueba\\GraficaBarras.png"), grafico, 800, 800);
         } catch (IOException ex) {
@@ -166,17 +143,15 @@ public class FuncionesGraficas {
         //CRECION DE JFreeChart objeto para las graficas
         JFreeChart grafico = null;
         //crear un archivador de datos para nuestro GRAFICO
-      //  DefaultCategoryDataset datos = new DefaultCategoryDataset();
+        //DefaultCategoryDataset datos = new DefaultCategoryDataset();
         
         XYSeries unDato = new XYSeries("XDDeito");
           
         XYSeriesCollection datos = new XYSeriesCollection();
-        
-        
+  
         //DECLARACION DE LA CLASE FUNCIONES PARA UTILIZARLA COMO AUXILIAR
         Funciones funAux = new Funciones();
-            
-          
+       
         //RECORRER TODOS LOS FRAMES almacenados en el vector
         for( int i=0 ; i<Principal.contenedorFrames.size() ; i++ ){
         
@@ -233,7 +208,7 @@ public class FuncionesGraficas {
         }
         
         
-         datos.addSeries(unDato);
+        datos.addSeries(unDato);
      
         
         grafico = ChartFactory.createXYLineChart("Grafica de la emocion " + funAux.claseEnteroACadena(tipo), "Segundos transcurridos", funAux.claseEnteroACadena(tipo), datos, PlotOrientation.VERTICAL, false, true, false);
@@ -284,30 +259,15 @@ public class FuncionesGraficas {
         
         plot.setRenderer(rendered);
         
-      /*  ChartPanel panelito = new ChartPanel(grafico);
-        
-        JFrame ventanita44 = new JFrame("grafiquita");
-        
-       
-        
-        ventanita44.setSize(500,500);
-        
-       // ventanita44.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-        ventanita44.add(panelito);
-        
-        
-         ventanita44.setVisible(true);*/
-      
-            //CREACION DEL PANEL PARA MOSTRRAR (VENTANA)
+     
+        //CREACION DEL PANEL PARA MOSTRRAR (VENTANA)
         ChartPanel cPanel = new ChartPanel(grafico);
         //NOMBRE DE PANEL
         JFrame informacion = new JFrame("Grafica de la emocion" + funAux.claseEnteroACadena(tipo));
         //INTRODUCIR NOMBRE
         informacion.getContentPane().add(cPanel);
         informacion.pack();
-   
-        
+      
         //PONER VISIBLE EL PANEL
         informacion.setVisible(true);
 

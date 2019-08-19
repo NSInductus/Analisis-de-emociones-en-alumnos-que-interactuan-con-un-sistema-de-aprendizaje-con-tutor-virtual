@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//PAQUETE NECESARIO
 package PaquetePostAnalisis;
 
+//IMPORT NECESARIOS
 import PaqueteAnalisisVideo.Funciones;
 import PaquetePreAnalisis.Principal;
 import java.io.File;
@@ -31,156 +28,147 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  *
- * @author angel
+ * @author Angel Murcia Diaz
  */
+
+//CLASE FUNCIONESRESULTADOS
 public class FuncionesResultados {
     
-    
     Funciones aux = new Funciones();
-    
-    
+
     public void crearResultadosPorcentajes(){
 
+        //total util
+        double totalUtil = Principal.nFotosAnalizadas - Principal.noAnalizadoContador;
 
-    //total util
-    double totalUtil = Principal.nFotosAnalizadas - Principal.noAnalizadoContador;
-    
-    //evitar indeterminaciones
-    if(totalUtil!=0){
+        //evitar indeterminaciones
+        if(totalUtil!=0){
 
-    //evitar una indeterminacion
-    if(Principal.angerContador != 0){
-       
-        //CONTADOR anger
-        Principal.angerContadorPorcentaje = (Principal.angerContador * 100.0) / totalUtil;  
-    
-    }else{
-        
-        Principal.angerContadorPorcentaje = 0;
-        
-    }
-    
-    //evitar una indeterminacion
-    if(Principal.contemptContador != 0){
-       
-        //CONTADOR anger
-        Principal.contemptContadorPorcentaje = (Principal.contemptContador * 100.0) / totalUtil;  
-    
-    }else{
-        
-        Principal.contemptContadorPorcentaje = 0;
-        
-    }
-        
-    
-    //evitar una indeterminacion
-    if(Principal.disgustContador != 0){
-       
-        //CONTADOR anger
-        Principal.disgustContadorPorcentaje = (Principal.disgustContador * 100.0) / totalUtil;  
-    
-    }else{
-        
-        Principal.disgustContadorPorcentaje = 0;
-        
-    }
-       
-      
-    //evitar una indeterminacion
-    if(Principal.fearContador != 0){
-       
-        //CONTADOR anger
-        Principal.fearContadorPorcentaje = (Principal.fearContador * 100.0) / totalUtil;  
-    
-    }else{
-        
-        Principal.fearContadorPorcentaje = 0;
-        
-    }
-    
-    //evitar una indeterminacion
-    if(Principal.happinessContador != 0){
-       
-        //CONTADOR anger
-        Principal.happinessContadorPorcentaje = (Principal.happinessContador *100.0) / totalUtil;  
-    
-    }else{
-        
-        Principal.happinessContadorPorcentaje = 0;
-        
-    }
-          
-    //evitar una indeterminacion
-    if(Principal.neutralContador != 0){
-       
-        //CONTADOR anger
-        Principal.neutralContadorPorcentaje = (Principal.neutralContador * 100.0) / totalUtil;  
-        System.out.println("llego");
-    
-    }else{
-        
-        Principal.neutralContadorPorcentaje = 0;
-        
-    }
+            //evitar una indeterminacion
+            if(Principal.angerContador != 0){
 
-    //evitar una indeterminacion
-    if(Principal.sadnessContador != 0){
-       
-        //CONTADOR anger
-        Principal.sadnessContadorPorcentaje = (Principal.sadnessContador * 100.0) / totalUtil;  
-    
-    }else{
-        
-        Principal.sadnessContadorPorcentaje = 0;
-       
-    }
-    
-    //evitar una indeterminacion
-    if(Principal.surpriseContador != 0){
-       
-        //CONTADOR anger
-        Principal.surpriseContadorPorcentaje = (Principal.surpriseContador * 100.0) / totalUtil;  
-    
-    }else{
-        
-        Principal.surpriseContadorPorcentaje = 0;
-        
-    }
-    
-    }else{
-        
+                //CONTADOR anger
+                Principal.angerContadorPorcentaje = (Principal.angerContador * 100.0) / totalUtil;  
+
+            }else{
+
+                Principal.angerContadorPorcentaje = 0;
+
+            }
+
+            //evitar una indeterminacion
+            if(Principal.contemptContador != 0){
+
+                //CONTADOR anger
+                Principal.contemptContadorPorcentaje = (Principal.contemptContador * 100.0) / totalUtil;  
+
+            }else{
+
+                Principal.contemptContadorPorcentaje = 0;
+
+            }
+
+            //evitar una indeterminacion
+            if(Principal.disgustContador != 0){
+
+                //CONTADOR anger
+                Principal.disgustContadorPorcentaje = (Principal.disgustContador * 100.0) / totalUtil;  
+
+            }else{
+
+                Principal.disgustContadorPorcentaje = 0;
+
+            }
+
+            //evitar una indeterminacion
+            if(Principal.fearContador != 0){
+
+                //CONTADOR anger
+                Principal.fearContadorPorcentaje = (Principal.fearContador * 100.0) / totalUtil;  
+
+            }else{
+
+                Principal.fearContadorPorcentaje = 0;
+
+            }
+
+            //evitar una indeterminacion
+            if(Principal.happinessContador != 0){
+
+                //CONTADOR anger
+                Principal.happinessContadorPorcentaje = (Principal.happinessContador *100.0) / totalUtil;  
+
+            }else{
+
+                Principal.happinessContadorPorcentaje = 0;
+
+            }
+
+            //evitar una indeterminacion
+            if(Principal.neutralContador != 0){
+
+                //CONTADOR anger
+                Principal.neutralContadorPorcentaje = (Principal.neutralContador * 100.0) / totalUtil;  
+                System.out.println("llego");
+
+            }else{
+
+                Principal.neutralContadorPorcentaje = 0;
+
+            }
+
+            //evitar una indeterminacion
+            if(Principal.sadnessContador != 0){
+
+                //CONTADOR anger
+                Principal.sadnessContadorPorcentaje = (Principal.sadnessContador * 100.0) / totalUtil;  
+
+            }else{
+
+                Principal.sadnessContadorPorcentaje = 0;
+
+            }
+
+            //evitar una indeterminacion
+            if(Principal.surpriseContador != 0){
+
+                //CONTADOR anger
+                Principal.surpriseContadorPorcentaje = (Principal.surpriseContador * 100.0) / totalUtil;  
+
+            }else{
+
+                Principal.surpriseContadorPorcentaje = 0;
+
+            }
+
+        }else{
+
             //CONTADOR anger
-    Principal.angerContadorPorcentaje = 0.0;  
-        
-    //CONTADOR contempt
-    Principal.contemptContadorPorcentaje = 0.0;      
-      
-    //CONTADOR disgust
-    Principal.disgustContadorPorcentaje = 0.0;
-    
-    //CONTADOR fear
-    Principal.fearContadorPorcentaje = 0.0;
-          
-    //CONTADOR happiness
-    Principal.happinessContadorPorcentaje = 0.0;
-       
-    //CONTADOR neutral
-    Principal.neutralContadorPorcentaje = 0.0;
+            Principal.angerContadorPorcentaje = 0.0;  
 
-    //CONTADOR sadness
-    Principal.sadnessContadorPorcentaje = 0.0;
-       
-    //CONTADOR surprise
-    Principal.surpriseContadorPorcentaje = 0.0;  
-        
-        
-        
-    }
-       
+            //CONTADOR contempt
+            Principal.contemptContadorPorcentaje = 0.0;      
+
+            //CONTADOR disgust
+            Principal.disgustContadorPorcentaje = 0.0;
+
+            //CONTADOR fear
+            Principal.fearContadorPorcentaje = 0.0;
+
+            //CONTADOR happiness
+            Principal.happinessContadorPorcentaje = 0.0;
+
+            //CONTADOR neutral
+            Principal.neutralContadorPorcentaje = 0.0;
+
+            //CONTADOR sadness
+            Principal.sadnessContadorPorcentaje = 0.0;
+
+            //CONTADOR surprise
+            Principal.surpriseContadorPorcentaje = 0.0;  
+        }
 
     }
-    
-   
     
     
     public void resultadosTXT(int formato) throws IOException{
@@ -188,8 +176,7 @@ public class FuncionesResultados {
             System.out.println(Principal.nombreFichero);
             
             String ruta = null;
-            
-           
+               
             if(formato==1){
             
              ruta = Principal.rutaGuardar + "\\" + Principal.nombreFichero + ".txt" ;
@@ -200,10 +187,6 @@ public class FuncionesResultados {
                 
             }
             
-            
-            //String ruta = "C:\\Users\\angel\\Desktop\\prueba\\resultados.txt";
-
-            
             FileWriter fichero = null;
             PrintWriter pw = null;
         
@@ -213,82 +196,75 @@ public class FuncionesResultados {
            	pw = new PrintWriter(fichero);
                 
                 if(formato==1){
-                  
 
-                pw.println("------------------------RESUMEN EN FICHERO-------------------------");   
-                pw.println("--------------------------------------------------------"); 
+                    pw.println("------------------------RESUMEN EN FICHERO-------------------------");   
+                    pw.println("--------------------------------------------------------"); 
 
-                pw.println("anger:");
-                pw.println(Principal.angerContador);
+                    pw.println("anger:");
+                    pw.println(Principal.angerContador);
 
-                pw.println("contempt: ");
-                pw.println(Principal.contemptContador);
+                    pw.println("contempt: ");
+                    pw.println(Principal.contemptContador);
 
-                pw.println("disgust: ");
-                pw.println(Principal.disgustContador);
+                    pw.println("disgust: ");
+                    pw.println(Principal.disgustContador);
 
-                pw.println("fear: ");
-                pw.println(Principal.fearContador);
+                    pw.println("fear: ");
+                    pw.println(Principal.fearContador);
 
-                pw.println("happiness: ");
-                pw.println(Principal.happinessContador);
+                    pw.println("happiness: ");
+                    pw.println(Principal.happinessContador);
 
-                pw.println("neutral: ");
-                pw.println(Principal.neutralContador);
+                    pw.println("neutral: ");
+                    pw.println(Principal.neutralContador);
 
-                pw.println("sadness: ");
-                pw.println(Principal.sadnessContador);
+                    pw.println("sadness: ");
+                    pw.println(Principal.sadnessContador);
 
-                pw.println("surprise: ");
-                pw.println(Principal.surpriseContador);
+                    pw.println("surprise: ");
+                    pw.println(Principal.surpriseContador);
 
-                pw.println("Fotos NO analizadas: ");
-                pw.println(Principal.noAnalizadoContador);
+                    pw.println("Fotos NO analizadas: ");
+                    pw.println(Principal.noAnalizadoContador);
 
-                pw.println("Fotos analizadas: ");
-                pw.println(Principal.nFotosAnalizadas);
-                
+                    pw.println("Fotos analizadas: ");
+                    pw.println(Principal.nFotosAnalizadas);
+
                 
                 }else if(formato==2){
             
-                    
-                pw.println("------------------------RESUMEN EN FICHERO EN PORCENTAJE-------------------------");   
-                pw.println("--------------------------------------------------------"); 
+                    pw.println("------------------------RESUMEN EN FICHERO EN PORCENTAJE-------------------------");   
+                    pw.println("--------------------------------------------------------"); 
 
-                pw.println("Porcentaje anger:");
-                pw.println(Principal.angerContadorPorcentaje);
+                    pw.println("Porcentaje anger:");
+                    pw.println(Principal.angerContadorPorcentaje);
 
-                pw.println("Porcentaje contempt: ");
-                pw.println(Principal.contemptContadorPorcentaje);
+                    pw.println("Porcentaje contempt: ");
+                    pw.println(Principal.contemptContadorPorcentaje);
 
-                pw.println("Porcentaje disgust: ");
-                pw.println(Principal.disgustContadorPorcentaje);
+                    pw.println("Porcentaje disgust: ");
+                    pw.println(Principal.disgustContadorPorcentaje);
 
-                pw.println("Porcentaje fear: ");
-                pw.println(Principal.fearContadorPorcentaje);
+                    pw.println("Porcentaje fear: ");
+                    pw.println(Principal.fearContadorPorcentaje);
 
-                pw.println("Porcentaje happiness: ");
-                pw.println(Principal.happinessContadorPorcentaje);
+                    pw.println("Porcentaje happiness: ");
+                    pw.println(Principal.happinessContadorPorcentaje);
 
-                pw.println("Porcentaje neutral: ");
-                pw.println(Principal.neutralContadorPorcentaje);
+                    pw.println("Porcentaje neutral: ");
+                    pw.println(Principal.neutralContadorPorcentaje);
 
-                pw.println("Porcentaje sadness: ");
-                pw.println(Principal.sadnessContadorPorcentaje);
+                    pw.println("Porcentaje sadness: ");
+                    pw.println(Principal.sadnessContadorPorcentaje);
 
-                pw.println("Porcentaje surprise: ");
-                pw.println(Principal.surpriseContadorPorcentaje);
+                    pw.println("Porcentaje surprise: ");
+                    pw.println(Principal.surpriseContadorPorcentaje);
 
-                pw.println("Fotos útiles: ");
-                pw.println(Principal.nFotosAnalizadas-Principal.noAnalizadoContador);
-
-            
-            
+                    pw.println("Fotos útiles: ");
+                    pw.println(Principal.nFotosAnalizadas-Principal.noAnalizadoContador);
+           
                 }
 
-                    
-                
- 
         } catch (Exception e) {
         	e.printStackTrace();
         } finally {
@@ -322,7 +298,6 @@ public class FuncionesResultados {
             
         }
                    
-        
         // Creamos el archivo donde almacenaremos la hoja
         // de calculo, recuerde usar la extension correcta,
         // en este caso .xlsx
@@ -336,18 +311,14 @@ public class FuncionesResultados {
 
         // La hoja donde pondremos los datos
         Sheet pagina = workbook.createSheet("Resumen de las emociones del sujeto");
-        
-      
-        
+           
         // Creamos el estilo paga las celdas del encabezado
         CellStyle style = workbook.createCellStyle();
         // Indicamos que tendra un fondo azul aqua
         // con patron solido del color indicado
         style.setFillForegroundColor(IndexedColors.BLUE.getIndex());
         style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-        
-   
-        
+
         if(formato==1){
 
             String[] titulos = {"anger", "contempt",
@@ -460,23 +431,17 @@ public class FuncionesResultados {
     public void crearDatasetPorFotograma(){
     
         String nombreFichero = Principal.rutaGuardar + "\\DatosPorFotograma-" + Principal.nombreFichero + ".xlsx" ;
-                   
-        
-        
+
         // Creamos el archivo donde almacenaremos la hoja
         // de calculo, recuerde usar la extension correcta,
         // en este caso .xlsx
         File archivo = new File(nombreFichero);
-        
-        
-
+ 
         // Creamos el libro de trabajo de Excel formato OOXML
         Workbook workbook = new XSSFWorkbook();
 
         // La hoja donde pondremos los datos
         Sheet pagina = workbook.createSheet("Resumen de las emociones del sujeto");
-
-
 
         String[] titulos = {"name", "second",
             "emotion principal", "all emotion"};
@@ -498,16 +463,14 @@ public class FuncionesResultados {
             //celda.setCellStyle(style);
             celda.setCellValue(titulos[i]);
         }
-
-
-                
-         //PARA RECOGER TODOS LOS ELEMENTOS DEL VECTOR O CONTENEDOR
+        
+        //PARA RECOGER TODOS LOS ELEMENTOS DEL VECTOR O CONTENEDOR
         for( int i=0 ; i<Principal.contenedorFrames.size() ; i++ ){
             
-                    // Ahora creamos una fila en la posicion 1
-        Row fila = pagina.createRow(i+1);
+             // Ahora creamos una fila en la posicion 1
+            Row fila = pagina.createRow(i+1);
         
-                    // posicion indicada por el contador del ciclo
+            // posicion indicada por el contador del ciclo
             Cell celda = fila.createCell(0);
             
             //IMPRESION DE ELEMENTOS
@@ -515,7 +478,7 @@ public class FuncionesResultados {
             //System.out.print("El archivo se llama: ");
             celda.setCellValue(Principal.contenedorFrames.get(i).getNombreFile()); 
             
-                  // posicion indicada por el contador del ciclo
+            // posicion indicada por el contador del ciclo
             Cell celda2 = fila.createCell(1);
             
             //System.out.print("pertenece al segundo: ");
@@ -525,13 +488,12 @@ public class FuncionesResultados {
             int clase = Principal.contenedorFrames.get(i).getClaseMayor();
             String claseCadena = aux.claseEnteroACadena(clase);
             
-                  // posicion indicada por el contador del ciclo
+            // posicion indicada por el contador del ciclo
             Cell celda3 = fila.createCell(2);
            
             //System.out.print("y es de la clase (MAYORITARIA): ");
             celda3.setCellValue(claseCadena); 
             
-          
             //IMPRESION DE TODAS LAS CLASES PERTENECIENTES
             ArrayList<Integer> clases = new ArrayList<>();
             clases = Principal.contenedorFrames.get(i).getClases();
@@ -550,8 +512,7 @@ public class FuncionesResultados {
                 
                 if(j==0){
                     
-                    clasesCadena = claseCadena;
-                    
+                    clasesCadena = claseCadena;      
                 
                 }else{
                 
@@ -567,8 +528,8 @@ public class FuncionesResultados {
             //System.out.print("y es de la clase (MAYORITARIA): ");
             celda4.setCellValue(clasesCadena); 
             
-             pagina.autoSizeColumn(i);
-           // System.out.println("");
+            pagina.autoSizeColumn(i);
+          
         }
 
         // Ahora guardaremos el archivo
@@ -617,10 +578,8 @@ public class FuncionesResultados {
                                  "% fear", "% happiness", "% neutral", "% sadness", "% surprise", "analizadas",
                                  "no analizadas", "utiles"};
             //Integer[] datos = {};
-            
 
             Row fila = pagina.createRow(0);
-            
             
             for (int i = 0; i < titulos.length; i++) {
 
@@ -628,8 +587,6 @@ public class FuncionesResultados {
                 celda.setCellValue(titulos[i]);
                 pagina.autoSizeColumn(i);
             }
-
-            
 
             fila = pagina.createRow(1);
             
@@ -644,12 +601,6 @@ public class FuncionesResultados {
                 celda.setCellValue(nuevosDatos.get(i));
                 pagina.autoSizeColumn(i+1);
             }
-            
-            
-   
-            ////////////
-
-
 
             FileOutputStream salida = new FileOutputStream(archivo);
 
@@ -678,10 +629,8 @@ public class FuncionesResultados {
         
         //COMPROBAR SI EXISTE
         resultado = Files.exists(archivo.toPath()) ;
-        
-  
-        return resultado;
-        
+
+        return resultado;    
         
     }
     
@@ -690,8 +639,7 @@ public class FuncionesResultados {
     public static void cargarDatasetUnico() throws IOException{
         
         String nombreFichero = Principal.rutaGuardar + "\\" + Principal.nombreDatasetUnico + ".xlsx" ;
-   
-        
+ 
         FileInputStream file = new FileInputStream(new File(nombreFichero));
 
 	XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -768,8 +716,7 @@ public class FuncionesResultados {
         int ultimo = 0;
         
         String nombreFichero = Principal.rutaGuardar + "\\" + Principal.nombreDatasetUnico + ".xlsx" ;
-   
-        
+  
         File archivo = new File(nombreFichero);
           
         Workbook workbook = new XSSFWorkbook();
@@ -795,54 +742,45 @@ public class FuncionesResultados {
             pagina.autoSizeColumn(i);
         }
             
-        
-     
+
         for(int i=0; i< Principal.rowsDatasetUnico.size(); i++){
 
-        fila = pagina.createRow(Principal.rowsDatasetUnico.get(i));
-        ultimo = Principal.rowsDatasetUnico.get(i);
-        Cell celda = fila.createCell(0);
-        celda.setCellValue(Principal.nombresDatasetUnico.get(i));
-        pagina.autoSizeColumn(0);
-
-        for (int j = 0; j < Principal.arrayDatosDatasetUnico.get(i).size() ; j++) {
-
-            celda = fila.createCell(j+1);
-            celda.setCellValue(Principal.arrayDatosDatasetUnico.get(i).get(j));
-            pagina.autoSizeColumn(j+1);
-
-        }
-
-        }
-
-        ////////////////
-            
-            
-
-            fila = pagina.createRow(ultimo+1);
-            
+            fila = pagina.createRow(Principal.rowsDatasetUnico.get(i));
+            ultimo = Principal.rowsDatasetUnico.get(i);
             Cell celda = fila.createCell(0);
-            celda.setCellValue(nombre);
+            celda.setCellValue(Principal.nombresDatasetUnico.get(i));
             pagina.autoSizeColumn(0);
-            
-            
-            for (int i = 0; i < nuevosDatos.size(); i++) {
 
-                celda = fila.createCell(i+1);
-                celda.setCellValue(nuevosDatos.get(i));
-                pagina.autoSizeColumn(i+1);
+            for (int j = 0; j < Principal.arrayDatosDatasetUnico.get(i).size() ; j++) {
+
+                celda = fila.createCell(j+1);
+                celda.setCellValue(Principal.arrayDatosDatasetUnico.get(i).get(j));
+                pagina.autoSizeColumn(j+1);
+
             }
 
-
-        ////////////
-
+        }
 
 
-            FileOutputStream salida = new FileOutputStream(archivo);
+        fila = pagina.createRow(ultimo+1);
 
-            workbook.write(salida);
+        Cell celda = fila.createCell(0);
+        celda.setCellValue(nombre);
+        pagina.autoSizeColumn(0);
 
-            workbook.close();
+
+        for (int i = 0; i < nuevosDatos.size(); i++) {
+
+            celda = fila.createCell(i+1);
+            celda.setCellValue(nuevosDatos.get(i));
+            pagina.autoSizeColumn(i+1);
+        }
+
+        FileOutputStream salida = new FileOutputStream(archivo);
+
+        workbook.write(salida);
+
+        workbook.close();
 
             
     }
@@ -876,17 +814,10 @@ public class FuncionesResultados {
         nuevosDatos.add(Double.valueOf(Principal.nFotosAnalizadas));
         nuevosDatos.add(Double.valueOf(Principal.noAnalizadoContador));
         nuevosDatos.add(Double.valueOf(Principal.nFotosAnalizadas)-Double.valueOf(Principal.noAnalizadoContador));
-        
 
-        
-       return nuevosDatos;
+        return nuevosDatos;
             
     }
-    
-        
-    
-    
-    
     
     
 }

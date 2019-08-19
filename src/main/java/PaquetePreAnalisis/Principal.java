@@ -1,11 +1,8 @@
-
 //INCLUSION NECESARIA DEL PAQUETE
 package PaquetePreAnalisis;
 
-//VERSION BETA ES EL PROYECTO PruebaTFGVIDEO2 de netbeans
 
 //IMPORT NECESARIOS
-
 import PaqueteVentanas.VentanaDespuesDeAnalisis;
 import PaqueteVentanas.VentanaUsuario;
 import PaqueteVentanas.VentanaSeguimiento;
@@ -20,42 +17,17 @@ import java.util.ArrayList;
 
 /**
  *
- * @author angel
+ * @author Angel Murcia Diaz
  */
-//CLASE PRINCIPAL M A I N
+
+//CLASE PRINCIPAL (MAIN)
 public class Principal {
     
-    ////////////////////////////
-    //DECLARACION DE CONTADORES
+    //////////////////////////////
+    //DECLARACION DE CONTADORES//
+    /////////////////////////////
     
-    //CONTADORES MAYORITARIOS, SOLO CUENTAN LA CLASE MAYOR DE LA IMAGEN
-    
-    //CONTADOR anger MAYORITARIO
-    public static int angerContadorMayor = 0;  
-        
-    //CONTADOR contempt MAYORITARIO
-    public static int contemptContadorMayor = 0;      
-      
-    //CONTADOR disgust MAYORITARIO
-    public static int disgustContadorMayor = 0;
-    
-    //CONTADOR fear MAYORITARIO
-    public static int fearContadorMayor = 0;
-          
-    //CONTADOR happiness MAYORITARIO
-    public static int happinessContadorMayor = 0;
-       
-    //CONTADOR neutral MAYORITARIO
-    public static int neutralContadorMayor = 0;
-
-    //CONTADOR sadness MAYORITARIO
-    public static int sadnessContadorMayor = 0;
-       
-    //CONTADOR surprise MAYORITARIO
-    public static int surpriseContadorMayor = 0;  
-    
-     ////////////////////////////
-    //DECLARACION DE CONTADORES GENERALES QUE MIEDEN CADA UNA DE LAS FOTOS ANALIZADAS
+    //DECLARACION DE CONTADORES GENERALES//
     
     //CONTADOR anger
     public static int angerContador = 0;  
@@ -81,73 +53,73 @@ public class Principal {
     //CONTADOR surprise
     public static int surpriseContador = 0;  
     
-    ////////////////////////
-    //CONTADOR surprise ESTE ES TANTO GENERAL COMO MAYORITARIO
+    //CONTADOR NO ANALIZADO
     public static int noAnalizadoContador = 0;  
    
-    /////////////////////////
-    //MAS CONTADORES
-    
-    //CONTADOR ESPECIAL (VECES), para la pausa ya que las analice todas con la gratuita
-    public static int veces = 0;  
-    
-    //CONTADOR del total de fotos analizadas
+    //CONTADOR TOTAL DE FOTOGRAMAS
     public static int nFotosAnalizadas = 0;
     
+    //CONTADOR (VECES), para la version de prueba
+    public static int veces = 0;  
     
+    //CONTADORES MAYORITARIOS//
     
+    //CONTADOR anger MAYORITARIO
+    public static int angerContadorMayor = 0;  
+        
+    //CONTADOR contempt MAYORITARIO
+    public static int contemptContadorMayor = 0;      
+      
+    //CONTADOR disgust MAYORITARIO
+    public static int disgustContadorMayor = 0;
     
-    ////////////////////////////////
-    /////////////////////////////////
-    /////////////////////////////////
+    //CONTADOR fear MAYORITARIO
+    public static int fearContadorMayor = 0;
+          
+    //CONTADOR happiness MAYORITARIO
+    public static int happinessContadorMayor = 0;
+       
+    //CONTADOR neutral MAYORITARIO
+    public static int neutralContadorMayor = 0;
+
+    //CONTADOR sadness MAYORITARIO
+    public static int sadnessContadorMayor = 0;
+       
+    //CONTADOR surprise MAYORITARIO
+    public static int surpriseContadorMayor = 0;  
     
-        //CONTADORES EN PORCENTAJES, RESPECTO A QUE?
-    
-    
-    
-    //CONTADOR anger
+    //CONTADORES EN PORCENTAJES//
+
+    //CONTADOR anger PORCENTAJE
     public static double angerContadorPorcentaje = 0.0;  
         
-    //CONTADOR contempt
+    //CONTADOR contempt PORCENTAJE
     public static double contemptContadorPorcentaje = 0.0;      
       
-    //CONTADOR disgust
+    //CONTADOR disgust PORCENTAJE
     public static double disgustContadorPorcentaje = 0.0;
     
-    //CONTADOR fear
+    //CONTADOR fear PORCENTAJE
     public static double fearContadorPorcentaje = 0.0;
           
-    //CONTADOR happiness
+    //CONTADOR happiness PORCENTAJE
     public static double happinessContadorPorcentaje = 0.0;
        
-    //CONTADOR neutral
+    //CONTADOR neutral PORCENTAJE
     public static double neutralContadorPorcentaje = 0.0;
 
-    //CONTADOR sadness
+    //CONTADOR sadness PORCENTAJE
     public static double sadnessContadorPorcentaje = 0.0;
        
-    //CONTADOR surprise
+    //CONTADOR surprise PORCENTAJE
     public static double surpriseContadorPorcentaje = 0.0;  
     
-    ////////////////////////
-    //CONTADOR surprise ESTE ES TANTO GENERAL COMO MAYORITARIO
-    public static double noAnalizadoContadorPorcentaje = 0.0;  
+     /////////////////////////////////////
+    //VARIABLES (OPCIONES CONFIGURABLES)//
+    /////////////////////////////////////
     
-    
-    //////////////////////////////////
-    /////////////////////////////////
-    /////////////////////////////////
-    
+    //CON VALORES QUE UTILIZARA EL PROGRAMA//
 
-  
-    
-
-    
-    
-    
-    ////////////////////////////
-    //MAS VARIABLES QUE CONTENDRAN LOS VALORES QUE UTILIZARA EL PROGRAMA
-    
     //UMBRAL PARA ACEPTAR EL SENTIMIENTO
     public static double umbralSentimiento = 0.1 ;
     
@@ -162,35 +134,8 @@ public class Principal {
     
     //GUARDAR FOTOGRAMAS
     public static boolean conservar;
-    
-    
-    
-    
-    
-    //////////////////////////////
-    //VARIABLES NECESARIAS PARA EL PROCESAMIENTO
-    
-    //vector que contendra los datos de cada FRAME
-    public static ArrayList<Contenedor> contenedorFrames = new ArrayList<>();
-    
-    //MENSAJE QUE APARECERA EN LA VENTANA DE ERROR
-    public static String error = null;
- 
-    //COMPRUEBA SI EL USUARIO SE HA IDENTIFICADO O NO
-    public static boolean sesionIniciada = false;
-  
-    //HILO PARA CREAR EL SUDPROCESO QUE HARA TODO EL ANALISIS DE VIDEO
-    public static HiloProcesoPrincipal hilo1=new HiloProcesoPrincipal("Proceso principal de analisis de video");
-   
-    //STRING QUE CONTIENE EL VIDEO A ANALIZAR (ESTA AQUI PARA QUE PUEDA SER LLAMADO DESDE VARIOS LUGARES)
-    public static String videoFile = null;
-    
-    
-    
-    
-    
-    ////////////////////////////
-    //MAS VARIABLES QUE CONTENDRAN LOS VALORES QUE INTRODUCIRA EL USUARIO
+        
+    //VALORES QUE INTRODUCIRA EL USUARIO//
     
     //UMBRAL PARA ACEPTAR EL SENTIMIENTO
     public static double valorUsuarioUmbral = 0.1;
@@ -206,29 +151,43 @@ public class Principal {
     
     //GUARDAR FOTOGRAMAS
     public static boolean valorUsuarioConservar = false;
+
+    //////////////////////////////////////////////
+    //VARIABLES NECESARIAS PARA EL PROCESAMIENTO//
+    /////////////////////////////////////////////
     
+    //vector que contendra los datos de cada FRAME
+    public static ArrayList<Contenedor> contenedorFrames = new ArrayList<>();
     
+    //MENSAJE QUE APARECERA EN LA VENTANA DE ERROR
+    public static String error = null;
+ 
+    //COMPRUEBA SI EL USUARIO SE HA IDENTIFICADO O NO
+    public static boolean sesionIniciada = false;
+  
+    //HILO PARA CREAR EL SUDPROCESO QUE HARA TODO EL ANALISIS DE VIDEO
+    public static HiloProcesoPrincipal hilo1=new HiloProcesoPrincipal("Proceso principal de analisis de video");
+   
+    //STRING QUE CONTIENE EL VIDEO A ANALIZAR 
+    public static String videoFile = null;
+
+    ///////////////////
+    //DATOS (USUARIO)//
+    //////////////////
     
-    
-    
-    //////////////////////////////////////////
-    //MAS DATOS DE IMPORTANCVVIA (NIVEL DE USUARIO)
-    
-    //SI ES O NO VERSION DE PRUEBA DE LA API DE MICROSOFT
-    //ESTA SE ELEGE EN LA GESTION DE USUARIOS EN LUGAR DE LA VENTANA OPCIONES
+    //TIPO DE VERSION DE LA API DE MICROSOFT
     public static boolean versionPrueba = true;
     
     //VARIABLE PARA SABER CUANDO EL PROGRAMA ESTA EN PAUSA
     public static boolean estaEnPausa = false;
     
-    //TODOS LOS DATOS
+    //TODOS LOS DATOS (USUARIO COMPLETO)
     public static Usuario user = new Usuario();
-   
+
+    ////////////
+    //VENTANAS//
+    ///////////
     
-    
-    
-    
-    //VENTANAS
     //CREACIÓN VENTANA DE SEGUIMIENTO
     public static VentanaPrincipal ventana_principal = new VentanaPrincipal() ;
     
@@ -247,7 +206,7 @@ public class Principal {
     //VENTANA ACTUALIZAR USUARIO
     public static VentanaUsuarioActualizar ventana_usuario_actualizar = new VentanaUsuarioActualizar();
     
-    //VENTANA DESPUES DE ANALISIS (CON MENUS)
+    //VENTANA DESPUES DE ANALISIS 
     public static VentanaDespuesDeAnalisis ventana_final = new VentanaDespuesDeAnalisis();
     
     //VENTANA GRAFICAS FINALES
@@ -256,45 +215,46 @@ public class Principal {
     //VENTANA RESULTADOS FINALES
     public static VentanaResultadosFinales ventana_resultados = new VentanaResultadosFinales();
     
-    
-    
-    //NOMBRE DEL VIDEO PARA TENERLO CUANDO SE GUARDEN LOS RESULTADOS
-    public static String nombreFichero;
-    
-    //cambiar nombre a matar proceso principal¿?¿
-    //nuevo
-    public static boolean matarHilo;
-    
-    public static boolean errorDuranteAnalisis;
-    
-    public static int formatoResultado;
-    
-    
-    //PARA DATASET UNICO (es decir, un unico XLSX para todos los videos)
-    //Nombre del dataset unico que se almacenara en la ruta elegida en las opciones
+    ////////////////////////////////
+    //VARIABLES PARA DATASET UNICO// 
+    ///////////////////////////////
+
+    //NOMBRE DEL DATASET UNICO
     static public String nombreDatasetUnico = "datasetUnico";
     
-    //Matriz donde cada fila es una de las filas del excell antiguo
+    //MATRIZ PARA ALMACENAR LAS FILAS DEL ANTERIOR DOCUEMNTO
     static public ArrayList<ArrayList<Double>> arrayDatosDatasetUnico = new ArrayList<>();
     
     //Vector donde cada posicion es el nombre de cada fila
+    //VECTOR PARA ALMACENAR EN NOMBRE DE LOS VIDEOS DE CADA FILA
     static public ArrayList<String> nombresDatasetUnico = new ArrayList<>();
     
-    //Vector donde cada posicion es la fila que ocupa en el excel una fila de la matrix y una posicion del vector anterior
+    //VECTOR PARA ALMACENAR LA POSICION QUE OCUPA CADA UNA DE LAS FILAS
     static public ArrayList<Integer> rowsDatasetUnico = new ArrayList<>();
+    
+    /////////////////
+    //MAS VARIABLES//
+    ////////////////
+    
+   //NOMBRE DEL VIDEO PARA TENERLO CUANDO SE GUARDEN LOS RESULTADOS
+    public static String nombreFichero;
+    
+    //VARIABLE PARA MATAR UN HILO
+    public static boolean matarHilo;
+    
+    //VARIABLE QUE INDICA SI EXISTE UN ERROR DURANTE EL ANALISIS
+    public static boolean errorDuranteAnalisis;
+    
+    //VARIABLE PARA INDICAR EL FORMATO DE LOS RESULTADOS
+    public static int formatoResultado;
 
     
-    //METODO PRINCIPAL FUNCION (JAVA)
+    //METODO PRINCIPAL(JAVA)
     public static void main( String args[] ) throws Exception {
-        
-       //CREACIÓN VENTANA PRINCIPAL, la interfaz que verá el usuario
-       //VentanaPrincipal ventana_principal = new VentanaPrincipal();
-       
-       //PONER VISIBLE LA VENTANA
-       //ventana_principal.setVisible(true);   
-      // ventana_principal.setResizable(false); 
       
+      //MOSTRAR EL PRIMER MENU (MENU DE USUARIOS)
       ventana_usuarios.setVisible(true);   
+      //NO PERMITIR REDIMENSION DE LA VENTANA
       ventana_usuarios.setResizable(false); 
       
   }  

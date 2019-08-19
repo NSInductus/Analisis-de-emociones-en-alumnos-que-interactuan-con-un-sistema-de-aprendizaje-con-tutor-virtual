@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//PAQUETE NECESARIO
 package PaqueteVentanas;
 
 import PaquetePostAnalisis.FuncionesResultados;
@@ -17,60 +13,59 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author angel
+ * @author Angel Murcia Diaz
  */
+
+//VENTANA: VENTANARESULTADOSFINALES
 public class VentanaResultadosFinales extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VentanaSeguimiento
-     */
+    //CONSTRUCTOR
     public VentanaResultadosFinales() {
         initComponents();
         actualizar();
     }
     
+    //FUNCION MOSTRAR MENSAJE
     public void mostrarMensaje(int tipo){
         
         if(tipo==1){
-        
-                //ERROR (AVISO) DESEADO
-                Principal.error = "HA TERMINADO EL PROCESO DE ESCRITURA EN DATASETUNICO";
 
-                //CREACIÓN VENTANA DE ERROR
-                VentanaAviso ventana_aviso = new VentanaAviso();
-                
-                //PONER LA VENTANA DE TAMAÑO FIJO
-                ventana_aviso.setResizable(false);
+            //ERROR (AVISO) DESEADO
+            Principal.error = "HA TERMINADO EL PROCESO DE ESCRITURA EN DATASETUNICO";
 
-                //PONER VISIBLE LA VENTANA
-                ventana_aviso.setVisible(true);  
-                
-                
+            //CREACIÓN VENTANA DE ERROR
+            VentanaAviso ventana_aviso = new VentanaAviso();
+
+            //PONER LA VENTANA DE TAMAÑO FIJO
+            ventana_aviso.setResizable(false);
+
+            //PONER VISIBLE LA VENTANA
+            ventana_aviso.setVisible(true);  
+  
         }else if (tipo==0){
             
-                                   //ERROR (AVISO) DESEADO
-                Principal.error = "NO SE PUEDE SOBREESCRIBIR POR ALGUNO DE LOS SIGUIENTES MOTIVOS:"
-                        + " \n 1.PORQUE EL ARCHIVO ESTA ABIERTO, PORFAVOR CIERRELO E INTENTELO DE NUEVO"
-                        + "\n 2.PORQUE EL ARCHIVO SE HA DAÑADO, PORFAVOR COMPRUEBELO O CREE UN NUEVO DATASETUNICO EN "
-                        + "OTRA UBICACIÓN";
+            //ERROR (AVISO) DESEADO
+            Principal.error = "NO SE PUEDE SOBREESCRIBIR POR ALGUNO DE LOS SIGUIENTES MOTIVOS:"
+                    + " \n 1.PORQUE EL ARCHIVO ESTA ABIERTO, PORFAVOR CIERRELO E INTENTELO DE NUEVO"
+                    + "\n 2.PORQUE EL ARCHIVO SE HA DAÑADO, PORFAVOR COMPRUEBELO O CREE UN NUEVO DATASETUNICO EN "
+                    + "OTRA UBICACIÓN";
 
-                //CREACIÓN VENTANA DE ERROR
-                VentanaError ventana_error = new VentanaError();
-                
-                //PONER LA VENTANA DE TAMAÑO FIJO
-                ventana_error.setResizable(false);
+            //CREACIÓN VENTANA DE ERROR
+            VentanaError ventana_error = new VentanaError();
 
-                //PONER VISIBLE LA VENTANA
-                ventana_error.setVisible(true);  
-                
-            
-            
+            //PONER LA VENTANA DE TAMAÑO FIJO
+            ventana_error.setResizable(false);
+
+            //PONER VISIBLE LA VENTANA
+            ventana_error.setVisible(true);  
+     
         }
     }
     
+    //FUNCION PROCESODATASETUNICO
     public void procesoDatasetUnico(){
         
-                //clase FuncionesResultados auxiliar para poder realizar todas las operaciones
+        //clase FuncionesResultados auxiliar para poder realizar todas las operaciones
         FuncionesResultados aux = new FuncionesResultados();
         
         aux.crearResultadosPorcentajes();
@@ -126,6 +121,7 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         
     }
     
+    //FUNCION ACTUALIZAR
     public void actualizar(){
         
         valorAnger.setText(Integer.toString(Principal.angerContador));
@@ -137,41 +133,31 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         valorSadness.setText(Integer.toString(Principal.sadnessContador));
         valorSurprise.setText(Integer.toString(Principal.surpriseContador));
         valorNo.setText(Integer.toString(Principal.noAnalizadoContador));
-        valorTotal.setText(Integer.toString(Principal.nFotosAnalizadas));
-        
+        valorTotal.setText(Integer.toString(Principal.nFotosAnalizadas));     
         etiquetaNo.setText("not analysed");
-
-        etiquetaTotal.setText("total analysed");
-        
+        etiquetaTotal.setText("total analysed");    
         
     }
     
-        public void actualizarPorcentajes(){
+    //FUNCION ACTUALIZARPORCENTAJES
+    public void actualizarPorcentajes(){
             
-           // System.out.println(String.format("%.2f", number));
         valorAnger.setText(String.format("%.2f", Principal.angerContadorPorcentaje));
-        //valorAnger.setText(Double.toString(Principal.angerContadorPorcentaje));
         valorContempt.setText(String.format("%.2f",Principal.contemptContadorPorcentaje));
         valorDisgust.setText(String.format("%.2f",Principal.disgustContadorPorcentaje));
         valorFear.setText(String.format("%.2f",Principal.fearContadorPorcentaje));
         valorHappiness.setText(String.format("%.2f",Principal.happinessContadorPorcentaje));
         valorNeutral.setText(String.format("%.2f",Principal.neutralContadorPorcentaje));
         valorSadness.setText(String.format("%.2f",Principal.sadnessContadorPorcentaje));
-        valorSurprise.setText(String.format("%.2f",Principal.surpriseContadorPorcentaje));
-        
+        valorSurprise.setText(String.format("%.2f",Principal.surpriseContadorPorcentaje));  
         etiquetaNo.setText("Useful");
         valorNo.setText(Integer.toString(Principal.nFotosAnalizadas - Principal.noAnalizadoContador));
         valorTotal.setText(" ");
         etiquetaTotal.setText("");
-        
-        
+      
     }
 
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
-     */
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -424,14 +410,14 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //FUNCION BOTON XLSX
     private void botonXLSXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonXLSXActionPerformed
-        // TODO add your handling code here:
 
         new FuncionesResultados().crearDataset(Principal.formatoResultado);
 
-
     }//GEN-LAST:event_botonXLSXActionPerformed
 
+    //FUNCION BOTON TXT
     private void resultadosTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadosTXTActionPerformed
         try {
             // TODO add your handling code here:
@@ -442,53 +428,40 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_resultadosTXTActionPerformed
 
+    //FUNCION BOTON ATRAS
     private void resultadosAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadosAtrasActionPerformed
         // TODO add your handling code here:
         Principal.ventana_resultados.setVisible(false);
         
     }//GEN-LAST:event_resultadosAtrasActionPerformed
 
+    //FUNCION BOTON %
     private void botonPorcentajesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPorcentajesActionPerformed
-        // TODO add your handling code here:
-        
-        //para probar
-        //Principal.angerContador++;
         
         new FuncionesResultados().crearResultadosPorcentajes();
         actualizarPorcentajes();
         Principal.formatoResultado=2;
-        new Funciones().imprimir("Porcentajes", "Porcentajes");
-        
+        new Funciones().imprimir("Porcentajes", "Porcentajes");   
         
     }//GEN-LAST:event_botonPorcentajesActionPerformed
 
+    //FUNCION BOTON TOTALES
     private void botonTotalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTotalesActionPerformed
-        // TODO add your handling code here:
+
         actualizar();
         Principal.formatoResultado=1;
     }//GEN-LAST:event_botonTotalesActionPerformed
 
+    //FUNCION DATASETTOTAL
     private void datasetTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datasetTotalActionPerformed
-        // TODO add your handling code here:
-        
 
-      //  mensajeAviso();
-         
         procesoDatasetUnico();
-        
-
         
     }//GEN-LAST:event_datasetTotalActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    //FUNCION PRINCIPAL
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -505,10 +478,7 @@ public class VentanaResultadosFinales extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VentanaResultadosFinales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VentanaResultadosFinales().setVisible(true);
