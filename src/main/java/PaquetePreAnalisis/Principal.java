@@ -14,6 +14,7 @@ import PaqueteVentanas.VentanaUsuarioActualizar;
 import PaqueteVentanas.VentanaUsuarioNuevo;
 import PaqueteAnalisisVideo.HiloProcesoPrincipal;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -256,7 +257,7 @@ public class Principal {
       ventana_usuarios.setVisible(true);   
       //NO PERMITIR REDIMENSION DE LA VENTANA
       ventana_usuarios.setResizable(false); 
-      
+
   }  
 
 }

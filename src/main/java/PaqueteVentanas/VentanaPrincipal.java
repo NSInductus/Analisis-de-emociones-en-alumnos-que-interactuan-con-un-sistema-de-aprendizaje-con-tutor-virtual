@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -26,6 +27,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     //CONSTRUCTOR
     public VentanaPrincipal() {
         initComponents();
+        //icono de la aplicacion
+        //setIconImage(new ImageIcon(getClass().getResource("/PaqueteImagenes/instrumentos32.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")
@@ -43,7 +46,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         BotonAnalizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaqueteImagenes/play32.png"))); // NOI18N
         BotonAnalizar.setText("ANALIZAR VIDEO");
         BotonAnalizar.setToolTipText("Clica aquí para empezar a analizar el video.");
-        BotonAnalizar.setActionCommand("ANALIZAR VIDEO");
         BotonAnalizar.setDefaultCapable(false);
         BotonAnalizar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         BotonAnalizar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);

@@ -110,3 +110,9 @@ public class Hilo2 extends Thread {
 //WARNING DE DATASET UNICO ANTES DE ACABAR PROCESO NO DESPUES // AL FINAL SE PUIDO// PONER COMO AVISO CON BOTON CONFIRMAR PARA SEGUIR ADELANTE
 
 //ventnaas centrada algo parecido setresizable
+
+
+////
+
+//funciones a la key y eso kitar
+
