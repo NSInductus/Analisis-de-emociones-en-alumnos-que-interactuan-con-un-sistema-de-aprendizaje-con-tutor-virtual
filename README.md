@@ -15,14 +15,14 @@ Las conclusiones más importantes del trabajo son: (1) que los alumnos experimen
 
 ## Código del proyecto
 
-El código de este proyecto está realizado en Java utilizando el entorno de desarrrollo NetBeans, el código se puede encontrar en  la carpeta "src": [Código del proyecto](https://github.com/NSInductus/Analisis-de-emociones-en-alumnos-que-interactuan-con-un-sistema-de-aprendizaje-con-tutor-virtual/src).
+El código de este proyecto está realizado en Java utilizando el entorno de desarrrollo NetBeans, el código se puede encontrar en  la carpeta "src": [Código del proyecto](https://github.com/NSInductus/Analisis-de-emociones-en-alumnos-que-interactuan-con-un-sistema-de-aprendizaje-con-tutor-virtual/tree/master/src/main).
 
 ## Memoria del proyecto
 
-La memoria del proyecto está escrita utilizando LaTex, en ella se explica de forma detallada todo el desarrollo del proyecto, corresponde con [memoria_manual_tecnico.pdf](https://github.com/NSInductus/Analisis-de-emociones-en-alumnos-que-interactuan-con-un-sistema-de-aprendizaje-con-tutor-virtual/doc/memoria_manual_tecnico.pdf).
+La memoria del proyecto está escrita utilizando LaTex, en ella se explica de forma detallada todo el desarrollo del proyecto, corresponde con [memoria_manual_tecnico.pdf](https://github.com/NSInductus/Analisis-de-emociones-en-alumnos-que-interactuan-con-un-sistema-de-aprendizaje-con-tutor-virtual/blob/master/doc/memoria_manual_tecnico.pdf).
 
 También existe un manual de código y un manual de usuario:
 
-* El manual de código corresponde con [memoria_manual_de_codigo.pdf](https://github.com/NSInductus/Analisis-de-emociones-en-alumnos-que-interactuan-con-un-sistema-de-aprendizaje-con-tutor-virtual/doc/memoria_manual_codigo.pdf), en este se encuentra todo el código del proyecto, aunque este código también se puede encontrar en este repositorio.
+* El manual de código corresponde con [memoria_manual_de_codigo.pdf](https://github.com/NSInductus/Analisis-de-emociones-en-alumnos-que-interactuan-con-un-sistema-de-aprendizaje-con-tutor-virtual/blob/master/doc/memoria_manual_codigo.pdf), en este se encuentra todo el código del proyecto, aunque este código también se puede encontrar en este repositorio.
 
-* EL manual de usuario correpsonde con [memoria_manual_de_usuario.pdf](https://github.com/NSInductus/Analisis-de-emociones-en-alumnos-que-interactuan-con-un-sistema-de-aprendizaje-con-tutor-virtual/doc/memoria_manual_usuario.pdf), en este se encuentra una guia para el usuario que quiera comenzar a utilizar la aplicación.
+* EL manual de usuario correpsonde con [memoria_manual_de_usuario.pdf](https://github.com/NSInductus/Analisis-de-emociones-en-alumnos-que-interactuan-con-un-sistema-de-aprendizaje-con-tutor-virtual/blob/master/doc/memoria_manual_usuario.pdf), en este se encuentra una guia para el usuario que quiera comenzar a utilizar la aplicación.
